@@ -10,3 +10,15 @@ Currently trying out the **_markdown spreadsheet_** to make this look a little l
 ![alt text][logo]
 
 [logo]: https://preview.redd.it/a-cat-obsessed-with-code-v0-cscninz8g3bb1.jpg?auto=webp&s=14cce2cad380243bbb438867affe533de46dddeb "Me lol"
+
+
+https://github.com/user-attachments/assets/5c0d87dc-f22f-4a0b-802f-794fde0077d5
+
+
+
+
+
+
+
+
+
