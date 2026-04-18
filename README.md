@@ -1,7 +1,7 @@
 # techBasics1_Annika_Hogrefe
 Assignment 1 / Due April 20
 
-# Hi! This is Annika's README!
+## Hi! This is # Annika's README!
 
 I have no prior experience with coding and programming, besides _DATAx_ but willing to try my best and hopefully create some cool stuff in *TechBasics1*.
 
@@ -12,7 +12,18 @@ Currently trying out the **_markdown spreadsheet_** to make this look a little l
 [logo]: https://preview.redd.it/a-cat-obsessed-with-code-v0-cscninz8g3bb1.jpg?auto=webp&s=14cce2cad380243bbb438867affe533de46dddeb "Me lol"
 
 
-https://github.com/user-attachments/assets/5c0d87dc-f22f-4a0b-802f-794fde0077d5
+## My coworker: # KATZI!
+
+Katzi has years of experience in coding and programming which makes her an irreplacable part of my work in this course.
+**Disclaimer:** Her labour **_does not_** inflict with any animal prtection laws and she recieves a fair amount of treats for her hard work _(see her bodytype as proof)._
+
+
+
+https://github.com/user-attachments/assets/7d6d4063-41f1-422d-9051-b2188f1a3b15
+
+
+
+https://github.com/user-attachments/assets/9e18d1d8-d9b2-4db9-842f-a0032e1f05b4
 
 
 
