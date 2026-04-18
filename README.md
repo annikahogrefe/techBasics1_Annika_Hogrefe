@@ -23,8 +23,7 @@ https://github.com/user-attachments/assets/7d6d4063-41f1-422d-9051-b2188f1a3b15
 
 **Disclaimer:** Her labour **_does not_** inflict with any animal prtection laws and she recieves a fair amount of treats for her hard work _(see her bodytype as proof)._
 
-For further questions or criti<img width="176" height="212" alt="Coding Meme" src="https://github.com/user-attachments/assets/57f4171d-13c2-4ce3-9efc-7aa7e1808f77" />
-que please reach out to her! **NOT ME**
+For further questions or critique please reach out to her! **NOT TO ME!!!**
 
 
 
