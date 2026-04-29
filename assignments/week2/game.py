@@ -158,5 +158,7 @@ elif lives == 1:
 else:
     print("that went terribly...")
 
-#ai use:
-# I used chatgpt for debugging (if I got error messages I didn't understand, mostly forgetting a {}, : or , lol) and helping me with the live system and typing effect. please contact me of you want to see the conversation! rest was all done by myself :)
+### ai use:
+# I used chatgpt for debugging (if I got error messages I didn't understand, mostly forgetting a {}, : or , lol) and helping me with the live system and typing effect. 
+# please contact me of you want to see the conversation! 
+# rest was all done by myself :)
