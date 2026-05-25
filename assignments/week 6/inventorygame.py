@@ -1,3 +1,6 @@
+# another supermarket game lol
+# thanks for the skeleton structure, really helped me to not panic in front of my blank screen and had me use ai less and 'experiment' more myself! :)
+
 import os
 import sys
 import time
@@ -23,7 +26,7 @@ def type_text(text, delay=0.02):
 
 # the 30-second memory countdown
 # ALL OF THIS COUNTDOWN AND CLEARING SCREEN WAS DONE BY GEMINI!
-# I really wanted this in my game but had no idea how to do it myself
+# I really wanted this in my game since I think it definetly increases the fun and makes it much more challenging but had no idea how to do it myself
 def run_memory_phase():
     os.system("cls" if os.name == "nt" else "clear")
 
