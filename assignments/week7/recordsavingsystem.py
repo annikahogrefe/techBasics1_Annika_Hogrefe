@@ -1,7 +1,7 @@
 # added the record saving system to my game from week 6
 # I'm a bit unsure about the order of all my things, it seems so messy but it work haha
 # did some stuff such as the timestamp, sorting and leaderboard UI with help of gemini
-
+# added a (NEW!) after the newly added stuff for the record saving system to make it easier to find the relevant parts for you so watch out :)
 
 import csv
 from datetime import datetime
