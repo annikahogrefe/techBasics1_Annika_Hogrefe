@@ -1,0 +1,137 @@
+# this one is basically me recreating the oiia oiia spinning cat meme with my cat (katzi :)).
+# i watched some youtube tutorials on how to do the classic dvd animation and applied some of the features
+# use gemini for debugging and the colour tint and special effects
+# workflow was basically: me recycling the dino code, watching tutorials and applying them, using gemini to optimise and fix mistakes
+# tip: play the oiia soundtrack for optimal experience. enjoy!
+
+import pygame
+import random
+import math
+import sys
+
+# initialize Pygame
+pygame.init()
+
+# constants
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+FPS = 60
+
+# set up display
+screen = pygame.display.set_index = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption("OIIA OIIA (KATZIS VERSION)")
+clock = pygame.time.Clock()
+
+
+# cat class
+class CatSprite(pygame.sprite.Sprite):
+    def __init__(self, image_path):
+        super().__init__()
+        # load base image
+        self.base_image = pygame.image.load(image_path).convert_alpha()
+
+        # random scaling of image
+        scale_factor = random.uniform(0.15, 0.35)
+        self.width = int(self.base_image.get_width() * scale_factor)
+        self.height = int(self.base_image.get_height() * scale_factor)
+        self.base_image = pygame.transform.scale(self.base_image, (self.width, self.height))
+
+        # colour tint
+        # blend a random color onto a copy of the image
+        # ALL DONE BY GEMINI!
+        self.tint_color = (random.randint(100, 255), random.randint(100, 255), random.randint(100, 255))
+        self.image = self.base_image.copy()
+        self.image.fill(self.tint_color, special_flags=pygame.BLEND_RGBA_MULT)
+
+        self.rect = self.image.get_rect()
+
+        # random initial positions
+        self.rect.x = random.randint(100, SCREEN_WIDTH - 100)
+        self.rect.y = random.randint(100, SCREEN_HEIGHT - 100)
+
+        # random speeds for linear movement
+        self.speed_x = random.choice([-4, -2, 2, 4]) * random.uniform(0.8, 1.5)
+        self.speed_y = random.choice([-4, -2, 2, 4]) * random.uniform(0.8, 1.5)
+
+        # non-linear / orbiting variables DONE WITH GEMINI!
+        self.angle = random.uniform(0, 360)
+        self.rotation_speed = random.uniform(1, 3)  # Speed of self-rotation
+        self.orbit_radius = random.randint(20, 60)  # Distance of orbit path
+        self.orbit_angle = random.uniform(0, 2 * math.pi)
+        self.orbit_speed = random.uniform(0.02, 0.05)
+
+    def update(self):
+        # base linear movement (bouncing off walls like the DVD logo screensaver) # AlSO GEMINI
+        self.rect.x += self.speed_x
+        self.rect.y += self.speed_y
+
+        if self.rect.left <= 0 or self.rect.right >= SCREEN_WIDTH:
+            self.speed_x *= -1
+            self.change_tint()  # special effect on bounce
+
+        if self.rect.top <= 0 or self.rect.bottom >= SCREEN_HEIGHT:
+            self.speed_y *= -1
+            self.change_tint()  # special effect on bounce
+
+        # non-linear modifier
+
+        self.orbit_angle += self.orbit_speed
+        offset_x = math.cos(self.orbit_angle) * self.orbit_radius
+        offset_y = math.sin(self.orbit_angle) * self.orbit_radius
+
+        # rotational special effect
+        self.angle = (self.angle + self.rotation_speed) % 360
+        old_center = (self.rect.centerx + offset_x, self.rect.centery + offset_y)
+
+        # rotate the tinted image safely without distorting the original copy
+        self.current_display_image = pygame.transform.rotate(self.image, self.angle)
+        self.current_display_rect = self.current_display_image.get_rect(center=old_center)
+
+    def change_tint(self):
+        """Special effect: Changes color slightly whenever hitting a wall"""
+        self.tint_color = (random.randint(100, 255), random.randint(100, 255), random.randint(100, 255))
+        self.image = self.base_image.copy()
+        self.image.fill(self.tint_color, special_flags=pygame.BLEND_RGBA_MULT)
+
+    def draw(self, surface):
+        # draw the dynamically rotated and offset image
+        surface.blit(self.current_display_image, self.current_display_rect)
+
+
+# game setup
+# create a sprite group to manage all katzis
+cat_group = []
+number_of_cats = 8
+
+for _ in range(number_of_cats):
+    # replace 'katzi.png' with your actual file name
+    try:
+        new_cat = CatSprite("katzi.png")
+        cat_group.append(new_cat)
+    except FileNotFoundError:
+        print("Error: Could not find 'katzi.png'. Please place katzis beautiful image in your script folder asap!")
+        sys.exit()
+
+# main loop
+running = True
+while running:
+    # event handling
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # logic updates
+    for cat in cat_group:
+        cat.update()
+
+    # drawing/rendering
+    screen.fill((57, 255, 20))  # neon green background
+
+    # draw all the unique cat instances
+    for cat in cat_group:
+        cat.draw(screen)
+
+    pygame.display.flip()
+    clock.tick(FPS)
+
+pygame.quit()
