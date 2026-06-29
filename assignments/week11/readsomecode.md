@@ -1,4 +1,4 @@
-### Read Some Code (& hopefully understand)
+## Read Some Code (& hopefully understand)
 
 ### 1. Where did you find the code and why did you choose it? (Provide the link)
 
@@ -50,8 +50,7 @@ def bmi_result(bmi):
 ### 4. Takeaways: are there anything you can learn from the code? (How to structure your code, a clean solution for some function you might also need...)
 * maybe a godd basic structure to start with, since I'm still a bit scared of an empty file haha
 
-### 5. What parts of the code were confusing or difficult at the beginning to understand?
-### Were you able to understand what it is doing after your own research?
+### 5. What parts of the code were confusing or difficult at the beginning to understand? Were you able to understand what it is doing after your own research?
 * was very simple to be honest, might have been smarter to choose something diffrent to learn more new stuff but I was so happy to see someone already did something like I had in mind
  
 ---
